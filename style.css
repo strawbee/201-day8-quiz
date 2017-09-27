@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h1 {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  border: solid 1px;
+  margin-top: -60px;
+  margin-bottom: 30px;
+  text-align: center;
+  background: #FFF;
+  z-index: 2;
+}
+
+.questions {
+  width: 600px;
+  text-align: left;
+  border: solid 1px;
+  border-radius: 0.5em;
+  padding: 40px;
+  margin: 100px auto 40px auto;
+  background: #eee;
+  z-index: 1;
+}
+
+.question {
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.response {
+  font-weight: 900;
+  background: yellow;
+}
+
+#points {
+  font-weight: 900;
+  text-align: center;
+  background: yellow;
+}
+
+q3Input {
+  border: 3;
+}
+
+#submitbox {
+  text-align:center;
+  margin-top: 50px;
+}

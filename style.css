@@ -49,11 +49,22 @@ h1 {
   background: yellow;
 }
 
-q3Input {
-  border: 3;
+#q3Input {
+  font-size: 1.2em;
+}
+
+#q4Input {
+  border: 2;
+  font-size: 1.2em;
 }
 
 #submitbox {
   text-align:center;
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+#submit {
+  font-size: 1.5em;
+  padding: 10px;
+  background: #FFF;
 }

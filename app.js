@@ -4,9 +4,11 @@ var points = 0;
 var submit = document.getElementById('submit');
 
 function gradeQuiz() {
+  var q1Answer, q1Response, q2Answer, q2Response, q3Input, q3Response, q3Answer, q3Guess, q4Input, q4Response, q4Answer, q4Guess, q5AnswerB, q5AnswerC, q5AnswerE, q5AnswerF, q5Response;
+
   // Checks Q1
-  var q1Answer = document.getElementById('q1C');
-  var q1Response = document.getElementById('q1Response');
+  q1Answer = document.getElementById('q1C');
+  q1Response = document.getElementById('q1Response');
   if (q1Answer.checked) {
     q1Response.textContent = 'Correct';
     points++;
@@ -15,8 +17,8 @@ function gradeQuiz() {
   }
 
   // Checks Q2
-  var q2Answer = document.getElementById('q2A');
-  var q2Response = document.getElementById('q2Response');
+  q2Answer = document.getElementById('q2A');
+  q2Response = document.getElementById('q2Response');
   if (q2Answer.checked) {
     q2Response.textContent = 'Correct';
     points++;
@@ -25,10 +27,10 @@ function gradeQuiz() {
   }
 
   // Checks Q3
-  var q3Input = document.getElementById('q3Input');
-  var q3Response = document.getElementById('q3Response');
-  var q3Answer = 'ANONYMOUS';
-  var q3Guess = q3Input.value;
+  q3Input = document.getElementById('q3Input');
+  q3Response = document.getElementById('q3Response');
+  q3Answer = 'ANONYMOUS';
+  q3Guess = q3Input.value;
   if (q3Guess.toUpperCase() === q3Answer) {
     q3Response.textContent = 'Correct';
     points++;
@@ -37,10 +39,10 @@ function gradeQuiz() {
   }
 
   // Checks Q4
-  var q4Input = document.getElementById('q4Input');
-  var q4Response = document.getElementById('q4Response');
-  var q4Answer = 'TARGET';
-  var q4Guess = q4Input.value;
+  q4Input = document.getElementById('q4Input');
+  q4Response = document.getElementById('q4Response');
+  q4Answer = 'TARGET';
+  q4Guess = q4Input.value;
   if (q4Guess.toUpperCase() === q4Answer) {
     q4Response.textContent = 'Correct';
     points++;
@@ -49,11 +51,11 @@ function gradeQuiz() {
   }
 
   // Checks Q5
-  var q5AnswerB = document.getElementById('q5B');
-  var q5AnswerC = document.getElementById('q5C');
-  var q5AnswerE = document.getElementById('q5E');
-  var q5AnswerF = document.getElementById('q5F');
-  var q5Response = document.getElementById('q5Response');
+  q5AnswerB = document.getElementById('q5B');
+  q5AnswerC = document.getElementById('q5C');
+  q5AnswerE = document.getElementById('q5E');
+  q5AnswerF = document.getElementById('q5F');
+  q5Response = document.getElementById('q5Response');
   if (q5AnswerB.checked && q5AnswerC.checked && q5AnswerE.checked && q5AnswerF.checked) {
     q5Response.textContent = 'Correct';
     points++;
@@ -79,6 +81,16 @@ function gradeQuiz() {
   q3Input.setAttribute('disabled', 'disabled');
   q4Input.setAttribute('disabled', 'disabled');
   submit.setAttribute('disabled', 'disabled');
+
+  // Highlight or Fill In Correct Answers
+  q1Answer.parentNode.style.background = '#d2e8ef';
+  q2Answer.parentNode.style.background = '#d2e8ef';
+  q5AnswerB.parentNode.style.background = '#d2e8ef';
+  q5AnswerC.parentNode.style.background = '#d2e8ef';
+  q5AnswerE.parentNode.style.background = '#d2e8ef';
+  q5AnswerF.parentNode.style.background = '#d2e8ef';
+  q3Input.value = 'Answer: ' + q3Answer;
+  q4Input.value = 'Answer: ' + q4Answer;
 
   // Show Points
   document.getElementById('points').innerHTML = 'You scored ' + points + ' out of 5 points!';

@@ -1,10 +1,10 @@
 'use strict';
 
-var points = 0;
 var submit = document.getElementById('submit');
 
 function gradeQuiz() {
   var q1Answer, q1Response, q2Answer, q2Response, q3Input, q3Response, q3Answer, q3Guess, q4Input, q4Response, q4Answer, q4Guess, q5AnswerB, q5AnswerC, q5AnswerE, q5AnswerF, q5Response;
+  var points = 0;
 
   // Checks Q1
   q1Answer = document.getElementById('q1C');

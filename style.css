@@ -53,6 +53,18 @@ input {
   margin: 6px;
 }
 
+input[type=text] {
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid 2px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=text]:focus {
+  background: #feffce;
+}
+
 #q3Input {
   font-size: 1.2em;
   width: 250px;
@@ -72,4 +84,6 @@ input {
   font-size: 1.5em;
   padding: 10px;
   background: #FFF;
+  border: solid 2px;
+  border-radius: 5px;
 }

@@ -1,10 +1,10 @@
 'use strict';
 
-var points = 0;
 var submit = document.getElementById('submit');
 
 function gradeQuiz() {
-  var q1Answer, q1Response, q2Answer, q2Response, q3Input, q3Response, q3Answer, q3Guess, q4Input, q4Response, q4Answer, q4Guess, q5AnswerB, q5AnswerC, q5AnswerE, q5AnswerF, q5Response;
+  var q1Answer, q1Response, q2Answer, q2Response, q3Input, q3Response, q3Answer, q3Guess, q4Input, q4Response, q4Answer, q4Guess, q5AnswerB, q5AnswerC, q5AnswerE, q5AnswerF, q5Response, inputElements, i;
+  var points = 0;
 
   // Checks Q1
   q1Answer = document.getElementById('q1C');
@@ -63,23 +63,12 @@ function gradeQuiz() {
     q5Response.textContent = 'Wrong';
   }
 
-  // Disable Form. There is surely a more efficient way to loop or do this, but too lazy right now.
-  document.getElementById('q1A').disabled = true;
-  document.getElementById('q1B').disabled = true;
-  document.getElementById('q1C').disabled = true;
-  document.getElementById('q1D').disabled = true;
-  document.getElementById('q2A').disabled = true;
-  document.getElementById('q2B').disabled = true;
-  document.getElementById('q2C').disabled = true;
-  document.getElementById('q2D').disabled = true;
-  document.getElementById('q5A').disabled = true;
-  document.getElementById('q5B').disabled = true;
-  document.getElementById('q5C').disabled = true;
-  document.getElementById('q5D').disabled = true;
-  document.getElementById('q5E').disabled = true;
-  document.getElementById('q5F').disabled = true;
-  q3Input.setAttribute('disabled', 'disabled');
-  q4Input.setAttribute('disabled', 'disabled');
+  // Disable Form
+  inputElements = document.querySelectorAll('input');
+  for (i = 0; i < inputElements.length; i++)
+  {
+    inputElements[i].disabled = true;
+  }
   submit.setAttribute('disabled', 'disabled');
 
   // Highlight or Fill In Correct Answers

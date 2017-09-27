@@ -3,7 +3,7 @@
 var submit = document.getElementById('submit');
 
 function gradeQuiz() {
-  var q1Answer, q1Response, q2Answer, q2Response, q3Input, q3Response, q3Answer, q3Guess, q4Input, q4Response, q4Answer, q4Guess, q5AnswerB, q5AnswerC, q5AnswerE, q5AnswerF, q5Response;
+  var q1Answer, q1Response, q2Answer, q2Response, q3Input, q3Response, q3Answer, q3Guess, q4Input, q4Response, q4Answer, q4Guess, q5AnswerB, q5AnswerC, q5AnswerE, q5AnswerF, q5Response, inputElements, i;
   var points = 0;
 
   // Checks Q1
@@ -64,8 +64,8 @@ function gradeQuiz() {
   }
 
   // Disable Form
-  var inputElements = document.querySelectorAll('input');
-  for (var i = 0; i < inputElements.length; i++)
+  inputElements = document.querySelectorAll('input');
+  for (i = 0; i < inputElements.length; i++)
   {
     inputElements[i].disabled = true;
   }

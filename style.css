@@ -29,7 +29,7 @@ h1 {
   border-radius: 0.5em;
   padding: 40px;
   margin: 100px auto 40px auto;
-  background: #eee;
+  background: #EEE;
   z-index: 1;
 }
 
@@ -49,13 +49,18 @@ h1 {
   background: yellow;
 }
 
+input {
+  margin: 6px;
+}
+
 #q3Input {
   font-size: 1.2em;
+  width: 250px;
 }
 
 #q4Input {
-  border: 2;
   font-size: 1.2em;
+  width: 250px;
 }
 
 #submitbox {

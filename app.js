@@ -63,23 +63,12 @@ function gradeQuiz() {
     q5Response.textContent = 'Wrong';
   }
 
-  // Disable Form. There is surely a more efficient way to loop or do this, but too lazy right now.
-  document.getElementById('q1A').disabled = true;
-  document.getElementById('q1B').disabled = true;
-  document.getElementById('q1C').disabled = true;
-  document.getElementById('q1D').disabled = true;
-  document.getElementById('q2A').disabled = true;
-  document.getElementById('q2B').disabled = true;
-  document.getElementById('q2C').disabled = true;
-  document.getElementById('q2D').disabled = true;
-  document.getElementById('q5A').disabled = true;
-  document.getElementById('q5B').disabled = true;
-  document.getElementById('q5C').disabled = true;
-  document.getElementById('q5D').disabled = true;
-  document.getElementById('q5E').disabled = true;
-  document.getElementById('q5F').disabled = true;
-  q3Input.setAttribute('disabled', 'disabled');
-  q4Input.setAttribute('disabled', 'disabled');
+  // Disable Form
+  var inputElements = document.querySelectorAll('input');
+  for (var i = 0; i < inputElements.length; i++)
+  {
+    inputElements[i].disabled = true;
+  }
   submit.setAttribute('disabled', 'disabled');
 
   // Highlight or Fill In Correct Answers
